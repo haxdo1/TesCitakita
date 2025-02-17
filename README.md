@@ -1,6 +1,6 @@
 # Nomor 1
 
-Diminta untuk memproses sebuah kalimat dengan mengganti beberapa kata dalam kalimat tersebut menggunakan kata akar (root words) yang diberikan. Kata-kata dalam kalimat yang memiliki awalan yang cocok dengan salah satu kata akar harus diganti dengan kata akar tersebut, dengan prioritas pada kata akar yang terpendek. Jika tidak ada kata akar yang cocok, kata tersebut tetap seperti semula.
+Diminta untuk memproses sebuah kalimat dengan mengganti beberapa kata dalam kalimat tersebut menggunakan kata akar (root words) yang diberikan. Kata-kata dalam kalimat yang memiliki awalan yang cocok dengan salah satu kata akar harus diganti dengan kata akar tersebut, dengan prioritas pada kata akar yang terpendek. Jika tidak ada kata akar yang cocok, kata tersebut tetap seperti semula. Disini saya menggunakan JavaScript untuk mengimplementasikan solusi dari soal ini. Pendekatan yang digunakan adalah dengan memecah kalimat menjadi kata-kata, kemudian memeriksa setiap kata satu per satu apakah ada kata akar yang cocok sebagai awalan. Jika ditemukan kata akar yang lebih pendek dari kata yang sedang diproses, maka kata tersebut akan diganti dengan kata akar tersebut. Jika tidak, kata tetap seperti semula.
 
 ## Code
 
@@ -33,6 +33,4 @@ console.log(replaceWords(["dog", "car", "bike"], "the dogs were barking near the
 ```
 the cat was rat by the bat
 the dog were barking near the car and bike
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
 ```
