@@ -19,4 +19,4 @@ city_counts.to_csv("output.csv", index=False)
 # Menyimpan hasil dalam format JSON
 city_counts.to_json("output.json", orient="records", indent=4)
 
-print("Proses selesai! Hasil disimpan dalam output.csv dan output.json")
+print("Proses selesai, Hasil disimpan dalam output.csv dan output.json")
