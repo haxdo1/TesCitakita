@@ -2,27 +2,31 @@
 
 diminta untuk memproses sebuah kalimat dengan mengganti beberapa kata dalam kalimat tersebut menggunakan kata akar (root words) yang diberikan. Kata-kata dalam kalimat yang memiliki awalan yang cocok dengan salah satu kata akar harus diganti dengan kata akar tersebut, dengan prioritas pada kata akar yang terpendek. Jika tidak ada kata akar yang cocok, kata tersebut tetap seperti semula.
 
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
 ## Usage
 
 ```python
-import foobar
+function replaceWords(kataAkar, kalimat) {
+    // Memecah kalimat menjadi kata-kata
+    const words = kalimat.split(" ");
 
-# returns 'words'
-foobar.pluralize('word')
+    // Iterasi setiap kata dalam kalimat dan menggantinya dengan akar kata terpendek jika sesuai
+    return words.map(word => {
+        let replacement = word;
+        for (const root of kataAkar) {
+            // Jika kata diawali dengan kata akar dan kata akar lebih pendek, gantikan kata
+            if (word.startsWith(root) && root.length < replacement.length) {
+                replacement = root;
+            }
+        }
+        return replacement;
+    }).join(" "); // Gabungkan kata-kata yang telah diganti menjadi kalimat
+}
 
-# returns 'geese'
-foobar.pluralize('goose')
+// Soal 1
+console.log(replaceWords(["cat", "bat", "rat"], "the cattle was rattled by the battery"));
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+// Soal 2
+console.log(replaceWords(["dog", "car", "bike"], "the dogs were barking near the cars and bikers"));
 ```
 
 ## Contributing
