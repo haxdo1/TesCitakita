@@ -34,3 +34,39 @@ console.log(replaceWords(["dog", "car", "bike"], "the dogs were barking near the
 the cat was rat by the bat
 the dog were barking near the car and bike
 ```
+# Nomor 2
+
+Diberikan dataset yang berisi daftar kota dari berbagai negara dalam format CSV. Dataset ini berisi nama negara dan kota-kota yang ada dalam negara tersebut. Tugas nya adalah untuk memproses dataset tersebut dengan cara mengelompokkan kota berdasarkan negara yang tercantum di dalam kolom country_name dan menghitung jumlah kota di setiap negara. Hasilnya harus disajikan dalam urutan menurun berdasarkan jumlah kota di setiap negara. Untuk nomor 2 saya menggunakan python dan menggunakan library pandas yang digunakan untuk membaca dataset dalam format csv, Setelah data dimuat, saya menggunakan metode value_counts() dari pandas untuk menghitung jumlah kota di setiap negara, Selanjutnya, saya menggunakan sort_values() untuk mengurutkan hasil perhitungan jumlah kota berdasarkan nilai yang dihasilkan, dengan negara yang memiliki jumlah kota paling sedikit (ascending) muncul terlebih dahulu.
+## Code
+
+```python
+import pandas as pd
+
+# URL dataset
+url = "https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/refs/heads/master/csv/cities.csv"
+
+# Membaca dataset dari URL
+df = pd.read_csv(url)
+
+# Mengelompokkan kota berdasarkan negara dan menghitung jumlah kota per negara
+city_counts = df['country_name'].value_counts(ascending=True).reset_index()
+city_counts.columns = ['country_name', 'city_count']
+
+# Mengurutkan hasil berdasarkan jumlah kota (ascending)
+city_counts = city_counts.sort_values(by='city_count', ascending=True)
+
+# Menyimpan hasil dalam format CSV
+city_counts.to_csv("output.csv", index=False)
+
+# Menyimpan hasil dalam format JSON
+city_counts.to_json("output.json", orient="records", indent=4)
+
+print("Proses selesai! Hasil disimpan dalam output.csv dan output.json")
+
+```
+
+## Output
+```
+the cat was rat by the bat
+the dog were barking near the car and bike
+```
