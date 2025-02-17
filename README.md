@@ -67,6 +67,41 @@ print("Proses selesai! Hasil disimpan dalam output.csv dan output.json")
 
 ## Output
 ```
-the cat was rat by the bat
-the dog were barking near the car and bike
+[
+  {
+    "country_name": "South Sudan",
+    "city_count": 1
+  },
+  {
+    "country_name": "Sao Tome and Principe",
+    "city_count": 5
+  },
+  {
+    "country_name": "Vanuatu",
+    "city_count": 7
+  },
+  {
+    "country_name": "Cayman Islands",
+    "city_count": 7
+  },
+  {
+    "country_name": "Grenada",
+    "city_count": 7
+  },
+  {
+    "country_name": "Solomon Islands",
+    "city_count": 7
+  },
+  {
+    "country_name": "Nauru",
+    "city_count": 7
+  },
+  {
+    "country_name": "Barbados",
+    "city_count": 7
+  },
+  {
+    "country_name": "Bonaire, Sint Eustatius and Saba",
+    "city_count": 8
+  }, .......
 ```
