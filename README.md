@@ -1,7 +1,7 @@
 ﻿# tescitakita
 Pada soal nomor 1, diminta untuk memproses sebuah kalimat dengan mengganti beberapa kata dalam kalimat tersebut menggunakan kata akar (root words) yang diberikan. Kata-kata dalam kalimat yang memiliki awalan yang cocok dengan salah satu kata akar harus diganti dengan kata akar tersebut, dengan prioritas pada kata akar yang terpendek. Jika tidak ada kata akar yang cocok, kata tersebut tetap seperti semula.
 
-Langkah Penyelesaian
+# Langkah Penyelesaian
 Pecah Kalimat Menjadi Kata-Kata
 
 Pertama, kita memecah kalimat yang diberikan menjadi kata-kata yang terpisah menggunakan metode split(). Hal ini memungkinkan kita untuk memproses setiap kata secara terpisah dan mengecek apakah ada kata akar yang cocok.
